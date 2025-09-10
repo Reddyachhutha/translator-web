@@ -11,6 +11,9 @@ model = MarianMTModel.from_pretrained(model_name)
 @app.route('/')
 def index():
     return app.send_static_file('index.html')  # Serve frontend
+@app.route('/')
+def contact():
+    return app.send_static_file('contact.html')
 
 @app.route('/translate', methods=['POST'])
 def translate():
